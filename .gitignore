@@ -3,8 +3,10 @@ prueba.txt
 #ignore everything
 /*
 /veggies_app/*
+
 #except
 !.gitignore
 !.dart
 !/veggies_app/
 !/veggies_app/lib/
+!/veggies_app/lib/home/

@@ -18,7 +18,7 @@ class GText extends StatelessWidget {
       style: TextStyle(
         fontFamily: 'Roboto',
         color:color,
-        fontSize: size,
+        fontSize: size==0?20:size,
         fontWeight: FontWeight.w400
       ),
     );

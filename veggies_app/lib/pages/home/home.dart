@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:veggies_app/home/Home_body.dart';
+import 'package:veggies_app/pages/home/Home_body.dart';
 import 'package:veggies_app/widgets/stext.dart';
 import 'package:veggies_app/widgets/text.dart';
 
@@ -41,23 +41,34 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                     ],
                   ),
                   Center(
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      child: Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "/profile",
+                        );
+                      },
+                      child: Container(
+                        width: 45,
+                        height: 45,
+                        child: Icon(
+                          Icons.person,
+                          color: Colors.white,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue,
+                        ),
                       ),
                     ),
                   )
                 ],
               )),
         ),
-        Home_body(),
+        Expanded(
+            child: SingleChildScrollView(
+          child: Home_body(),
+        )),
       ],
     ));
   }
